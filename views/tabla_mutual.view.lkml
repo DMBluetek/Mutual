@@ -79,7 +79,7 @@ view: tabla_mutual {
         label: "cumplio"
       }
       when: {
-        sql: ${rh} > 30;;
+        sql: ${rh} >= 30;;
         label: "cumplio"
       }
       else:"no cumplio"
@@ -92,7 +92,7 @@ view: tabla_mutual {
         label: "Cumplio"
       }
       when: {
-        sql: ${t} > 18;;
+        sql: ${t} >= 18;;
         label: "Cumplio"
       }
       else:"No Cumplio"
