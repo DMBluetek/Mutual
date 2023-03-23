@@ -88,11 +88,11 @@ view: tabla_mutual {
   dimension: estadoT{
     case: {
       when: {
-        sql: ${t} <= 18;;
+        sql: ${t} <= 24;;
         label: "Cumplio"
       }
       when: {
-        sql: ${t} > 24;;
+        sql: ${t} > 18;;
         label: "Cumplio"
       }
       else:"No Cumplio"
