@@ -59,6 +59,19 @@ view: tabla_mutual {
     type: count
     drill_fields: []
   }
+
+  measure: avgD_RH {
+    type: average_distinct
+    sql_distinct_key: ${time_time} ;;
+    sql: ${rh};;
+  }
+
+  measure: avgD_T {
+    type: average_distinct
+    sql_distinct_key: ${time_time} ;;
+    sql: ${t};;
+  }
+
   dimension: estadoRH{
     case: {
       when: {
@@ -75,11 +88,11 @@ view: tabla_mutual {
   dimension: estadoT{
     case: {
       when: {
-        sql: ${rh} <= 18;;
+        sql: ${t} <= 18;;
         label: "Cumplio"
       }
       when: {
-        sql: ${rh} > 24;;
+        sql: ${t} > 24;;
         label: "Cumplio"
       }
       else:"No Cumplio"
