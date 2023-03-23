@@ -63,13 +63,13 @@ view: tabla_mutual {
     case: {
       when: {
         sql: ${rh} <= 50;;
-        label: "Puro"
+        label: "cumplio"
       }
       when: {
         sql: ${rh} > 30;;
-        label: "Puro"
+        label: "cumplio"
       }
-      else:"Contaminado"
+      else:"no cumplio"
     }
   }
   dimension: estadoT{
