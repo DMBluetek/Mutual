@@ -75,7 +75,7 @@ view: tabla_mutual {
   dimension: estadoRH{
     case: {
       when: {
-        sql: ${rh} <= 50 & >= 30;;
+        sql: ${rh} <= 50 and >= 30;;
         label: "cumplio"
       }
       else:"no cumplio"
