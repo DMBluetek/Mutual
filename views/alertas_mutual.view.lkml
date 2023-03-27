@@ -79,4 +79,14 @@ view: alertas_mutual {
       else: "En Rango"
     }
   }
+
+  dimension: estadoT {
+    case: {
+      when: {
+        sql: ${at} = 1;;
+        label: "Fuera de rango"
+      }
+      else: "En Rango"
+    }
+  }
 }
