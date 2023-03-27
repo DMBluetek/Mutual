@@ -74,9 +74,9 @@ view: alertas_mutual {
     case: {
       when: {
         sql: ${arh} = 1;;
-        label: "porcentaje de tiempo contaminado"
+        label: "tiempo contaminado"
       }
-      else: "porcentaje de tiempo no contaminado"
+      else: "tiempo no contaminado"
     }
   }
 
@@ -84,9 +84,9 @@ view: alertas_mutual {
     case: {
       when: {
         sql: ${at} = 1;;
-        label: "porcentaje de tiempo contaminado"
+        label: "tiempo contaminado"
       }
-      else: "porcentaje de tiempo no contaminado"
+      else: "tiempo no contaminado"
     }
   }
 }
