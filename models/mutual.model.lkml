@@ -10,10 +10,13 @@ datagroup: mutual_default_datagroup {
 
 persist_with: mutual_default_datagroup
 
-explore: alertas_mutual {}
 
 explore: sysdiagrams {}
 
 explore: tabla_mutual {}
 
+explore: tabla_alertas {}
+
 explore: tabla_preliminar {}
+
+explore: table_bsense {}

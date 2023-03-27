@@ -8,7 +8,7 @@ view: tabla_mutual {
 
   dimension: id_disp {
     type: string
-    sql: ${TABLE}.id_disp ;;
+    sql: ${TABLE}.id_disp;;
   }
 
   dimension: pm1 {
@@ -58,5 +58,44 @@ view: tabla_mutual {
   measure: count {
     type: count
     drill_fields: []
+  }
+
+  measure: avgD_RH {
+    type: average_distinct
+    sql_distinct_key: ${time_time} ;;
+    sql: ${rh};;
+  }
+
+  measure: avgD_T {
+    type: average_distinct
+    sql_distinct_key: ${time_time} ;;
+    sql: ${t};;
+  }
+
+  dimension: estadoRH{
+    case: {
+      when: {
+        sql: ${rh} < 50;;
+        label: "cumplio"
+      }
+      when: {
+        sql: ${rh} > 30;;
+        label: "cumplio"
+      }
+      else:"no cumplio"
+    }
+  }
+  dimension: estadoT{
+    case: {
+      when: {
+        sql: ${t} <= 24;;
+        label: "Cumplio"
+      }
+      when: {
+        sql: ${t} >= 18;;
+        label: "Cumplio"
+      }
+      else:"No Cumplio"
+    }
   }
 }
