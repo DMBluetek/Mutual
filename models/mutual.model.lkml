@@ -20,3 +20,5 @@ explore: tabla_alertas {}
 explore: tabla_preliminar {}
 
 explore: table_bsense {}
+
+explore: alertas_mutual {}
