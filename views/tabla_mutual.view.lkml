@@ -93,7 +93,7 @@ view: tabla_mutual {
 
   measure: multiempo {
     type: sum
-    sql: (5 * ${estadoRH}) ;;
+    sql: 5 * count(${estadoRH}) ;;
   }
 
 }
