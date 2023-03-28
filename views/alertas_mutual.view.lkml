@@ -85,9 +85,9 @@ view: alertas_mutual {
     case: {
       when: {
         sql: ${arh} = 1;;
-        label: "🙁"
+        label: "Fuera de Rango"
       }
-      else: "😀"
+      else: "En Rango"
     }
   }
 
