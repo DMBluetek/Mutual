@@ -70,7 +70,7 @@ view: alertas_mutual {
     drill_fields: []
   }
 
-  dimension: estadoRH {
+  dimension: Grh {
     case: {
       when: {
         sql: ${TABLE}.ARH = 1;;
@@ -80,6 +80,17 @@ view: alertas_mutual {
     }
     sql: ${TABLE}.ARH ;;
   }
+
+  dimension: estadoRH {
+    case: {
+      when: {
+        sql: ${arh} = 1;;
+        label: "🙁"
+      }
+      else: "😀"
+    }
+  }
+
 
   dimension: estadoT {
     case: {
