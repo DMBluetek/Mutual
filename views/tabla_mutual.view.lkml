@@ -96,9 +96,9 @@ view: tabla_mutual {
     sql: 5 * count(${estadoRH}) ;;
   }
 
-  measure: avg_column {
+  measure: avg_rh {
     type: average
-    sql: ${TABLE} ;;
+    sql: ${rh} ;;
   }
 
 }
