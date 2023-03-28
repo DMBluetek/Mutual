@@ -74,7 +74,7 @@ view: alertas_mutual {
     type: string
     case: {
       when: {
-        sql: ${TABLE}.estadoRH = 1;;
+        sql: ${TABLE}.RH = 1;;
         label: "☑"
       }
       else: "☒"
