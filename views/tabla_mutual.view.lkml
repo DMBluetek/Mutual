@@ -120,7 +120,7 @@ view: tabla_mutual {
         sql: ${t} < 18;;
         label: "Bajo el Rango"
       }
-      else:"En el Rango"
+      else: "En el Rango"
     }
   }
 }
