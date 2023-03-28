@@ -90,4 +90,10 @@ view: tabla_mutual {
       else:"Fuera de Rango"
     }
   }
+
+  measure: multiempo {
+    type: sum
+    sql: (5 * ${estadoRH}) ;;
+  }
+
 }
