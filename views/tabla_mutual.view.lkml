@@ -94,4 +94,12 @@ view: tabla_mutual {
     sql: ${t} ;;
   }
 
+  measure: max_t {
+    type: max
+    sql: MAX(${t}) ;;
+  }
+  measure: max_rh {
+    type: max
+    sql: MAX(${rh}) ;;
+  }
 }
