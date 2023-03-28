@@ -126,11 +126,11 @@ view: tabla_mutual {
   dimension: barraRH{
     case: {
       when: {
-        sql: ${rh} > 24;;
+        sql: ${rh} > 50;;
         label: "Pasado el Rango"
       }
       when: {
-        sql: ${rh} < 18;;
+        sql: ${rh} < 30;;
         label: "Bajo el Rango"
       }
       else: "En el Rango"
