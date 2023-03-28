@@ -71,7 +71,6 @@ view: alertas_mutual {
   }
 
   dimension: estadoRH {
-    type: string
     case: {
       when: {
         sql: ${TABLE}.ARH = 1;;
