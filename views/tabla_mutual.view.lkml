@@ -75,10 +75,10 @@ view: tabla_mutual {
   dimension: estadoRH{
     case: {
       when: {
-        sql: ${rh} < 50 AND > 30;;
-        label: "cumplio"
+        sql: ${rh} < 50 AND ${rh} > 30;;
+        label: "En Rango"
       }
-      else:"no cumplio"
+      else:"Fuera de Rango"
     }
   }
   dimension: estadoT{
