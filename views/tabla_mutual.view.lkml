@@ -123,4 +123,17 @@ view: tabla_mutual {
       else: "En el Rango"
     }
   }
+  dimension: barraRH{
+    case: {
+      when: {
+        sql: ${rh} > 24;;
+        label: "Pasado el Rango"
+      }
+      when: {
+        sql: ${rh} < 18;;
+        label: "Bajo el Rango"
+      }
+      else: "En el Rango"
+    }
+  }
 }
