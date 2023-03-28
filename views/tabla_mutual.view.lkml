@@ -86,12 +86,12 @@ view: tabla_mutual {
 
   measure: avg_rh {
     type: average
-    sql: ROUND(${rh}) ;;
+    sql: ${rh} ;;
   }
 
   measure: avg_t {
     type: average
-    sql: ROUND(${t}) ;;
+    sql: ${t} ;;
   }
 
 }
