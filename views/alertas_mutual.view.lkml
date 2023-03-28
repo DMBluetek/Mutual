@@ -74,12 +74,12 @@ view: alertas_mutual {
     type: string
     case: {
       when: {
-        sql: ${TABLE}.RH = 1;;
-        label: "☑"
+        sql: ${TABLE}.ARH = 1;;
+        label: "😀"
       }
-      else: "☒"
+      else: "🙁"
     }
-    sql: ${TABLE}.estadoRH ;;
+    sql: ${TABLE}.ARH ;;
   }
 
   dimension: estadoT {
