@@ -72,7 +72,7 @@ view: tabla_mutual {
   dimension: estadoT{
     case: {
       when: {
-        sql: ${t} < 24 AND ${rh} > 18;;
+        sql: ${t} < 24 AND ${t} > 18;;
         label: "En Rango"
       }
       else:"Fuera de Rango"
@@ -96,10 +96,10 @@ view: tabla_mutual {
 
   measure: max_t {
     type: max
-    sql: MAX(${t}) ;;
+    sql: ${t} ;;
   }
   measure: max_rh {
     type: max
-    sql: MAX(${rh}) ;;
+    sql: ${rh} ;;
   }
 }
