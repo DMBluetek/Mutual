@@ -110,4 +110,17 @@ view: tabla_mutual {
     type: min
     sql: ${rh} ;;
   }
+  dimension: barraT{
+    case: {
+      when: {
+        sql: ${t} > 24;;
+        label: "Pasado el Rango"
+      }
+      when: {
+        sql: ${t} < 18;;
+        label: "Bajo el Rango"
+      }
+      else:"En el Rango"
+    }
+  }
 }
