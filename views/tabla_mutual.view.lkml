@@ -99,7 +99,7 @@ view: tabla_mutual {
     sql: ${t} ;;
   }
   measure: max_rh {
-    type: min
+    type: max
     sql: ${rh} ;;
   }
   measure: min_t {
