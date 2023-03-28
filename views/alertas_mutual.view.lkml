@@ -71,13 +71,15 @@ view: alertas_mutual {
   }
 
   dimension: estadoRH {
+    type: string
     case: {
       when: {
-        sql: ${arh} = 1;;
-        label: "tiempo contaminado"
+        sql: ${TABLE}.estadoRH = 1;;
+        label: "☑"
       }
-      else: "tiempo no contaminado"
+      else: "☒"
     }
+    sql: ${TABLE}.estadoRH. ;;
   }
 
   dimension: estadoT {
