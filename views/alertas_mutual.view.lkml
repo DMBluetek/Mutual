@@ -79,7 +79,7 @@ view: alertas_mutual {
       }
       else: "☒"
     }
-    sql: ${TABLE}.estadoRH. ;;
+    sql: ${TABLE}.estadoRH ;;
   }
 
   dimension: estadoT {
