@@ -96,9 +96,9 @@ view: alertas_mutual {
     case: {
       when: {
         sql: ${at} = 1;;
-        label: "tiempo contaminado"
+        label: "Fuera de Rango"
       }
-      else: "tiempo no contaminado"
+      else: "En Rango"
     }
   }
 }
