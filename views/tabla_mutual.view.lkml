@@ -84,14 +84,10 @@ view: tabla_mutual {
   dimension: estadoT{
     case: {
       when: {
-        sql: ${t} <= 24;;
-        label: "Cumplio"
+        sql: ${t} < 24 AND ${rh} > 18;;
+        label: "En Rango"
       }
-      when: {
-        sql: ${t} >= 18;;
-        label: "Cumplio"
-      }
-      else:"No Cumplio"
+      else:"Fuera de Rango"
     }
   }
 }
