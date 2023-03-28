@@ -60,18 +60,6 @@ view: tabla_mutual {
     drill_fields: []
   }
 
-  measure: avgD_RH {
-    type: average_distinct
-    sql_distinct_key: ${time_time} ;;
-    sql: ${rh};;
-  }
-
-  measure: avgD_T {
-    type: average_distinct
-    sql_distinct_key: ${time_time} ;;
-    sql: ${t};;
-  }
-
   dimension: estadoRH{
     case: {
       when: {
@@ -99,6 +87,11 @@ view: tabla_mutual {
   measure: avg_rh {
     type: average
     sql: ${rh} ;;
+  }
+
+  measure: avg_t {
+    type: average
+    sql: ${t} ;;
   }
 
 }
