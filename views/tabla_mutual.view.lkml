@@ -136,4 +136,9 @@ view: tabla_mutual {
       else: "En el Rango"
     }
   }
+  measure: avg_rhP {
+    type: average
+    sql: ${rh} ;;
+    value_format: "0.0"
+  }
 }
