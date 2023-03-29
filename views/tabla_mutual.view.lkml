@@ -63,7 +63,13 @@ view: tabla_mutual {
   }
   measure: Horas {
     type: number
-    sql: ${count} * 0.083 ;;
+    sql: ${count} * 5/60 ;;
+    drill_fields: []
+    value_format: "0\" Horas\""
+  }
+  measure: 15min {
+    type: number
+    sql: ${count} /3 ;;
     drill_fields: []
   }
 
@@ -89,34 +95,34 @@ view: tabla_mutual {
   measure: avg_rh {
     type: average
     sql: ${rh} ;;
-    value_format: "0.0"
+    value_format: "0.0\%"
   }
 
   measure: avg_t {
     type: average
     sql: ${t} ;;
-    value_format: "0.0"
+    value_format: "0.0\" °C\""
   }
 
   measure: max_t {
     type: max
     sql: ${t} ;;
-    value_format: "0.0"
+    value_format: "0.0\" °C\""
   }
   measure: max_rh {
     type: max
     sql: ${rh} ;;
-    value_format: "0.0"
+    value_format: "0.0\%"
   }
   measure: min_t {
     type: min
     sql: ${t} ;;
-    value_format: "0.0"
+    value_format: "0.0\" °C\""
   }
   measure: min_rh {
     type: min
     sql: ${rh} ;;
-    value_format: "0.0"
+    value_format: "0.0\%"
   }
   dimension: barraT{
     case: {
@@ -143,5 +149,15 @@ view: tabla_mutual {
       }
       else: "En el Rango (30-50%)"
     }
+  }
+  measure:  RHColor{
+    type: string
+    sql: ${barraRH} ;;
+    html:
+    {% if value == "En el Rango (30-50%)" %}
+    <p style="color: green; font-size: 100%">{{ rendered_value }}</p>
+    {% else %}
+    <p style="color: red; font-size:100%">{{ rendered_value }}</p>
+    {% endif %};;
   }
 }
