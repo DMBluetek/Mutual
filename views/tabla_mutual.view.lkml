@@ -140,13 +140,13 @@ view: tabla_mutual {
     case: {
       when: {
         sql: ${rh} > 50;;
-        label: "Sobre el Rango"
+        label: "Sobre el Rango (50-70%)"
       }
       when: {
         sql: ${rh} < 30;;
-        label: "Bajo el Rango"
+        label: "Bajo el Rango (10-30%)"
       }
-      else: "En el Rango"
+      else: "En el Rango (30-50%)"
     }
   }
 }
