@@ -76,7 +76,7 @@ view: tabla_mutual {
   dimension: estadoRH{
     case: {
       when: {
-        sql: ${rh} < 50 AND ${rh} > 30;;
+        sql: ${rh} <= 50 AND ${rh} >= 30;;
         label: "En Rango"
       }
       else:"Fuera de Rango"
@@ -85,7 +85,7 @@ view: tabla_mutual {
   dimension: estadoT{
     case: {
       when: {
-        sql: ${t} < 24 AND ${t} > 18;;
+        sql: ${t} <= 24 AND ${t} >= 18;;
         label: "En Rango"
       }
       else:"Fuera de Rango"
@@ -94,10 +94,13 @@ view: tabla_mutual {
   dimension: estadopm2_5{
     case: {
       when: {
-        sql: ${t} < 24 AND ${t} > 18;;
+        sql: ${pm2_5} <= 50 AND ${pm2_5} >= 0;;
         label: "En Rango"
       }
-      else:"Fuera de Rango"
+      when: {
+        sql: ${pm2_5} > 50;;
+        label: "Fuera de Rango"
+      }
     }
   }
 
@@ -115,7 +118,7 @@ view: tabla_mutual {
 
   measure: avg_pm2_5 {
     type: average
-    sql: ${t} ;;
+    sql: ${pm2_5} ;;
     value_format: "0.0\" μg/m3\""
   }
 
@@ -141,48 +144,57 @@ view: tabla_mutual {
   }
   measure: max_pm2_5 {
     type: max
-    sql: ${rh} ;;
+    sql: ${pm2_5} ;;
     value_format: "0.0\" μg/m3\""
   }
   measure: min_pm2_5 {
     type: min
-    sql: ${t} ;;
+    sql: ${pm2_5} ;;
     value_format: "0.0\" μg/m3\""
   }
 
   dimension: barraT{
     case: {
       when: {
-        sql: ${t} > 24;;
-        label: "Sobre el Rango (24-30°C)"
-      }
-      when: {
         sql: ${t} < 18;;
         label: "Bajo el Rango (12-18°C)"
       }
-      else: "En el Rango (18-24°C)"
+      when: {
+        sql: ${t} >= 18 AND ${t} <=24;;
+        label: "En el Rango (18-24°C)"
+      }
+      when: {
+        sql: ${t} > 24;;
+        label: "Sobre el Rango (24-30°C)"
+      }
     }
   }
   dimension: barraRH{
     case: {
       when: {
-        sql: ${rh} > 50;;
-        label: "Sobre el Rango (50-70%)"
-      }
-      when: {
         sql: ${rh} < 30;;
         label: "Bajo el Rango (10-30%)"
       }
-      else: "En el Rango (30-50%)"
+      when: {
+        sql: ${rh} >= 30 AND ${t} <=50;;
+        label: "En el Rango (30-50°C)"
+      }
+      when: {
+        sql: ${rh} > 50;;
+        label: "Sobre el Rango (50-70%)"
+      }
     }
   }
   dimension: barrapm2_5{
     case: {
       when: {
-        sql: ${rh} > 50;;
+        sql: ${pm2_5} <= 50;;
+        label: "En el Rango (0-50μg/m3)"
+      }
+      when: {
+        sql: ${pm2_5} > 50;;
         label: "Sobre el Rango (50-100μg/m3)"
       }
-      else: "En el Rango (0-50μg/m3)"
     }
   }
 }
