@@ -29,11 +29,13 @@ view: tabla_mutual {
   dimension: rh {
     type: number
     sql: ${TABLE}.RH ;;
+    value_format: "0.0"
   }
 
   dimension: t {
     type: number
     sql: ${TABLE}.T ;;
+    value_format: "0.0"
   }
 
   dimension_group: time {
