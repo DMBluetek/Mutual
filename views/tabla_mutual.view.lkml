@@ -127,7 +127,7 @@ view: tabla_mutual {
     case: {
       when: {
         sql: ${t} > 24;;
-        label: "Pasado el Rango"
+        label: "Sobre el Rango"
       }
       when: {
         sql: ${t} < 18;;
@@ -140,7 +140,7 @@ view: tabla_mutual {
     case: {
       when: {
         sql: ${rh} > 50;;
-        label: "Pasado el Rango"
+        label: "Sobre el Rango"
       }
       when: {
         sql: ${rh} < 30;;
