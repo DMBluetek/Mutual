@@ -189,9 +189,9 @@ view: tabla_mutual {
     case: {
       when: {
         sql: ${pm2_5} > 50;;
-        label: "Sobre Rango (50-100μg/m3)"
+        label: "(50-100μg/m3)"
       }
-      else: "En Rango (0-50μg/m3)"
+      else: "(0-50μg/m3)"
     }
   }
 }
