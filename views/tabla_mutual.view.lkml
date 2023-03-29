@@ -157,15 +157,15 @@ view: tabla_mutual {
     case: {
       when: {
         sql: ${t} < 18;;
-        label: "Bajo el Rango (12-18°C)"
+        label: "Bajo Rango (12-18°C)"
       }
       when: {
         sql: ${t} >= 18 AND ${t} <=24;;
-        label: "En el Rango (18-24°C)"
+        label: "En Rango (18-24°C)"
       }
       when: {
         sql: ${t} > 24;;
-        label: "Sobre el Rango (24-30°C)"
+        label: "Sobre Rango (24-30°C)"
       }
     }
   }
@@ -173,15 +173,15 @@ view: tabla_mutual {
     case: {
       when: {
         sql: ${rh} < 30;;
-        label: "Bajo el Rango (10-30%)"
+        label: "Bajo Rango (10-30%)"
       }
       when: {
         sql: ${rh} >= 30 AND ${t} <=50;;
-        label: "En el Rango (30-50%)"
+        label: "En Rango (30-50%)"
       }
       when: {
         sql: ${rh} > 50;;
-        label: "Sobre el Rango (50-70%)"
+        label: "Sobre Rango (50-70%)"
       }
     }
   }
@@ -189,9 +189,9 @@ view: tabla_mutual {
     case: {
       when: {
         sql: ${pm2_5} > 50;;
-        label: "Sobre el Rango (50-100μg/m3)"
+        label: "Sobre Rango (50-100μg/m3)"
       }
-      else: "En el Rango (0-50μg/m3)"
+      else: "En Rango (0-50μg/m3)"
     }
   }
 }
