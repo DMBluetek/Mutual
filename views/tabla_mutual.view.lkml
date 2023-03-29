@@ -157,15 +157,15 @@ view: tabla_mutual {
     case: {
       when: {
         sql: ${t} < 18;;
-        label: "(12-18°C)"
+        label: "(Bajo Rango 12-18°C)"
       }
       when: {
         sql: ${t} >= 18 AND ${t} <=24;;
-        label: "(18-24°C)"
+        label: "(En Rango 18-24°C)"
       }
       when: {
         sql: ${t} > 24;;
-        label: "(24-30°C)"
+        label: "(Sobre Rango 24-30°C)"
       }
     }
   }
