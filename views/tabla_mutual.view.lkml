@@ -91,6 +91,15 @@ view: tabla_mutual {
       else:"Fuera de Rango"
     }
   }
+  dimension: estadopm2_5{
+    case: {
+      when: {
+        sql: ${t} < 24 AND ${t} > 18;;
+        label: "En Rango"
+      }
+      else:"Fuera de Rango"
+    }
+  }
 
   measure: avg_rh {
     type: average
@@ -102,6 +111,12 @@ view: tabla_mutual {
     type: average
     sql: ${t} ;;
     value_format: "0.0\" °C\""
+  }
+
+  measure: avg_pm2_5 {
+    type: average
+    sql: ${t} ;;
+    value_format: "0.0\" μg/m3\""
   }
 
   measure: max_t {
@@ -124,6 +139,17 @@ view: tabla_mutual {
     sql: ${rh} ;;
     value_format: "0.0\%"
   }
+  measure: max_pm2_5 {
+    type: max
+    sql: ${rh} ;;
+    value_format: "0.0\" μg/m3\""
+  }
+  measure: min_pm2_5 {
+    type: min
+    sql: ${t} ;;
+    value_format: "0.0\" μg/m3\""
+  }
+
   dimension: barraT{
     case: {
       when: {
@@ -150,14 +176,13 @@ view: tabla_mutual {
       else: "En el Rango (30-50%)"
     }
   }
-  measure:  RHColor{
-    type: string
-    sql: ${barraRH} ;;
-    html:
-    {% if value == "En el Rango (30-50%)" %}
-    <p style="color: green; font-size: 100%">{{ rendered_value }}</p>
-    {% else %}
-    <p style="color: red; font-size:100%">{{ rendered_value }}</p>
-    {% endif %};;
+  dimension: barrapm2_5{
+    case: {
+      when: {
+        sql: ${rh} > 50;;
+        label: "Sobre el Rango (50-100μg/m3)"
+      }
+      else: "En el Rango (0-50μg/m3)"
+    }
   }
 }
