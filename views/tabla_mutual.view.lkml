@@ -87,28 +87,34 @@ view: tabla_mutual {
   measure: avg_rh {
     type: average
     sql: ${rh} ;;
+    value_format: "0.0"
   }
 
   measure: avg_t {
     type: average
     sql: ${t} ;;
+    value_format: "0.0"
   }
 
   measure: max_t {
     type: max
     sql: ${t} ;;
+    value_format: "0.0"
   }
   measure: max_rh {
     type: max
     sql: ${rh} ;;
+    value_format: "0.0"
   }
   measure: min_t {
     type: min
     sql: ${t} ;;
+    value_format: "0.0"
   }
   measure: min_rh {
     type: min
     sql: ${rh} ;;
+    value_format: "0.0"
   }
   dimension: barraT{
     case: {
@@ -135,10 +141,5 @@ view: tabla_mutual {
       }
       else: "En el Rango"
     }
-  }
-  measure: avg_rhP {
-    type: average
-    sql: ${rh} ;;
-    value_format: "0.0"
   }
 }
