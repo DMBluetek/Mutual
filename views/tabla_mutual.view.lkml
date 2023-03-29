@@ -61,9 +61,9 @@ view: tabla_mutual {
     type: count
     drill_fields: []
   }
-  measure: count5 {
+  measure: Horas {
     type: number
-    sql: ${count} * 5 ;;
+    sql: ${count} * 0.083 ;;
     drill_fields: []
   }
 
@@ -84,11 +84,6 @@ view: tabla_mutual {
       }
       else:"Fuera de Rango"
     }
-  }
-
-  measure: multiempo {
-    type: sum
-    sql: 5 * count(${estadoRH}) ;;
   }
 
   measure: avg_rh {
@@ -127,13 +122,13 @@ view: tabla_mutual {
     case: {
       when: {
         sql: ${t} > 24;;
-        label: "Sobre el Rango"
+        label: "Sobre el Rango (24-30°C)"
       }
       when: {
         sql: ${t} < 18;;
-        label: "Bajo el Rango"
+        label: "Bajo el Rango (12-18°C)"
       }
-      else: "En el Rango"
+      else: "En el Rango (18-24°C)"
     }
   }
   dimension: barraRH{
