@@ -61,6 +61,11 @@ view: tabla_mutual {
     type: count
     drill_fields: []
   }
+  measure: count5 {
+    type: number
+    sql: ${count} * 5 ;;
+    drill_fields: []
+  }
 
   dimension: estadoRH{
     case: {
