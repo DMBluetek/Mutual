@@ -188,10 +188,10 @@ view: tabla_mutual {
   dimension: barrapm2_5{
     case: {
       when: {
-        sql: ${pm2_5} <= 50 AND ${pm2_5} >= 0;;
-        label: "En el Rango (0-50μg/m3)"
+        sql: ${pm2_5} > 50;;
+        label: "Sobre el Rango (50-100μg/m3)"
       }
-      else: "Sobre el Rango (50-100μg/m3)"
+      else: "En el Rango (0-50μg/m3)"
     }
   }
 }
