@@ -173,17 +173,42 @@ view: tabla_mutual {
     case: {
       when: {
         sql: ${rh} < 30;;
-        label: "Bajo Rango (10-30%)"
+        label: "(10-30%)"
       }
+      when: {
+        sql: ${rh} >= 30 AND ${t} <=50;;
+        label: "(30-50%)"
+      }
+      when: {
+        sql: ${rh} > 50;;
+        label: "(50-70%)"
+      }
+    }
+  }
+  dimension: barraRHE{
+    case: {
       when: {
         sql: ${rh} >= 30 AND ${t} <=50;;
         label: "En Rango (30-50%)"
       }
+    }
+  }
+  dimension: barraRHS{
+    case: {
       when: {
         sql: ${rh} > 50;;
         label: "Sobre Rango (50-70%)"
       }
     }
+  }
+  dimension: barraRHB{
+    case: {
+      when: {
+        sql: ${rh} < 30;;
+        label: "Bajo Rango (10-30%)"
+      }
+    }
+
   }
   dimension: barrapm2_5{
     case: {
