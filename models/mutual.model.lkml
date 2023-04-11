@@ -22,3 +22,5 @@ explore: tabla_preliminar {}
 explore: table_bsense {}
 
 explore: alertas_mutual {}
+
+explore: tabla_mu {}
