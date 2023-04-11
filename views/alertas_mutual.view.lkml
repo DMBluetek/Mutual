@@ -69,4 +69,4 @@ view: alertas_mutual {
     type: count
     drill_fields: []
   }
-}
+  }
