@@ -69,36 +69,4 @@ view: alertas_mutual {
     type: count
     drill_fields: []
   }
-
-  dimension: Grh {
-    case: {
-      when: {
-        sql: ${TABLE}.ARH = 1;;
-        label: "😀"
-      }
-      else: "🙁"
-    }
-    sql: ${TABLE}.ARH ;;
   }
-
-  dimension: estadoRH {
-    case: {
-      when: {
-        sql: ${arh} = 1;;
-        label: "Fuera de Rango"
-      }
-      else: "En Rango"
-    }
-  }
-
-
-  dimension: estadoT {
-    case: {
-      when: {
-        sql: ${at} = 1;;
-        label: "Fuera de Rango"
-      }
-      else: "En Rango"
-    }
-  }
-}
