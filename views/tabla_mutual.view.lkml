@@ -79,8 +79,11 @@ view: tabla_mutual {
         sql: ${rh} <= 50 AND ${rh} >= 30;;
         label: "En Rango"
       }
-      else:"Fuera de Rango"
+      when: {
+        sql: ${rh} > 50 AND ${rh} < 30;;
+        label: "Fuera de Rango"
     }
+  }
   }
   dimension: estadoT{
     case: {
@@ -88,7 +91,10 @@ view: tabla_mutual {
         sql: ${t} <= 24 AND ${t} >= 18;;
         label: "En Rango"
       }
-      else:"Fuera de Rango"
+      when: {
+        sql: ${t} > 24 AND ${t} < 18;;
+        label: "Fuera de rango"
+      }
     }
   }
   dimension: estadopm2_5{
