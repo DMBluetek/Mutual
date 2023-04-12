@@ -8,7 +8,7 @@ view: tabla_mutual {
 
   dimension: id_disp {
     type: string
-    sql: ${TABLE}.id_disp;;
+    sql: ${TABLE}.id;;
   }
 
   dimension: pm1 {
