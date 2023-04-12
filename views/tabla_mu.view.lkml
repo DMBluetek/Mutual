@@ -1,5 +1,5 @@
 view: tabla_mu {
-  sql_table_name: dbo.TablaMu ;;
+  sql_table_name: dbo.BluesenseOfi ;;
 
   dimension: co2 {
     type: number
