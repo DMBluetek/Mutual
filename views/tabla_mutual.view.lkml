@@ -92,7 +92,7 @@ view: tabla_mutual {
         label: "En Rango"
       }
       when: {
-        sql: ${t} > 24 AND ${t} < 18;;
+        sql: ${t} > 24 OR ${t} < 18;;
         label: "Fuera de rango"
       }
     }
