@@ -63,7 +63,7 @@ view: tabla_mutual {
   }
   measure: Horas {
     type: number
-    sql: ${count} * 5/60 ;;
+    sql: ${count} * 1/60 ;;
     drill_fields: []
     value_format: "0\" Horas\""
   }
