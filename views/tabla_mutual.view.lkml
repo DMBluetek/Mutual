@@ -284,4 +284,22 @@ view: tabla_mutual {
       else: "(0-50μg/m3)"
     }
   }
+  dimension: barrapm1{
+    case: {
+      when: {
+        sql: ${pm1} > 50;;
+        label: "(50-100μg/m3)"
+      }
+      else: "(0-50μg/m3)"
+    }
+  }
+  dimension: barrapm10{
+    case: {
+      when: {
+        sql: ${pm10} > 50;;
+        label: "(50-100μg/m3)"
+      }
+      else: "(0-50μg/m3)"
+    }
+  }
 }
