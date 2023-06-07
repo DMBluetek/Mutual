@@ -141,6 +141,12 @@ view: tabla_mutual {
     value_format: "0.0\" μg/m3\""
   }
 
+  measure: avg_pm10 {
+    type: average
+    sql: ${pm10} ;;
+    value_format: "0.0\" μg/m3\""
+  }
+
   measure: max_t {
     type: max
     sql: ${t} ;;
