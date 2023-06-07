@@ -123,6 +123,19 @@ view: tabla_mutual {
     }
   }
 
+  dimension: estadopm1{
+    case: {
+      when: {
+        sql: ${pm1} <= 50 AND ${pm1} >= 0;;
+        label: "En Rango"
+      }
+      when: {
+        sql: ${pm1} > 50;;
+        label: "Fuera de Rango"
+      }
+    }
+  }
+
   measure: avg_rh {
     type: average
     sql: ${rh} ;;
