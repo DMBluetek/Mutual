@@ -196,6 +196,27 @@ view: tabla_mutual {
     sql: ${pm2_5} ;;
     value_format: "0.0\" μg/m3\""
   }
+  measure: max_pm10 {
+    type: max
+    sql: ${pm10} ;;
+    value_format: "0.0\" μg/m3\""
+  }
+  measure: min_pm10 {
+    type: min
+    sql: ${pm10} ;;
+    value_format: "0.0\" μg/m3\""
+  }
+  measure: max_pm1 {
+    type: max
+    sql: ${pm1} ;;
+    value_format: "0.0\" μg/m3\""
+  }
+  measure: min_pm1 {
+    type: min
+    sql: ${pm1} ;;
+    value_format: "0.0\" μg/m3\""
+  }
+
 
   dimension: barraT{
     case: {
