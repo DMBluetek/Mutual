@@ -109,6 +109,18 @@ view: tabla_mu {
       }
     }
   }
+  dimension: estadopm10{
+    case: {
+      when: {
+        sql: ${pm10} <= 50 AND ${pm10} >= 0;;
+        label: "En Rango"
+      }
+      when: {
+        sql: ${pm10} > 50;;
+        label: "Fuera de Rango"
+      }
+    }
+  }
 
   measure: avg_rh {
     type: average
