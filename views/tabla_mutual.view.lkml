@@ -420,46 +420,121 @@ view: tabla_mutual {
   dimension: barrapm2_5{
     case: {
       when: {
-        sql: ${pm2_5} > 50;;
-        label: "(50-100μg/m3)"
+        sql: ${pm2_5} < 25;;
+        label: "(0-25μg/m3)"
       }
-      else: "(0-50μg/m3)"
+      when: {
+        sql: ${pm2_5} >= 25 AND ${pm2_5} < 50;;
+        label: "(25-50μg/m3)"
+      }
+      when: {
+        sql: ${pm2_5} >= 50 AND ${pm2_5} < 75;;
+        label: "(50-75μg/m3)"
+      }
+      when: {
+        sql: ${pm2_5} >= 75 AND ${pm2_5} < 100;;
+        label: "(75-100μg/m3)"
+      }
+      when: {
+        sql: ${pm2_5} >= 100;;
+        label: "(100 - 200μg/m3)"
+      }
     }
   }
   dimension: barrapm1{
     case: {
       when: {
-        sql: ${pm1} > 50;;
-        label: "(50-100μg/m3)"
+        sql: ${pm1} < 25;;
+        label: "(0-25μg/m3)"
       }
-      else: "(0-50μg/m3)"
+      when: {
+        sql: ${pm1} >= 25 AND ${pm1} < 50;;
+        label: "(25-50μg/m3)"
+      }
+      when: {
+        sql: ${pm1} >= 50 AND ${pm1} < 75;;
+        label: "(50-75μg/m3)"
+      }
+      when: {
+        sql: ${pm1} >= 75 AND ${pm1} < 100;;
+        label: "(75-100μg/m3)"
+      }
+      when: {
+        sql: ${pm1} >= 100;;
+        label: "(100 - 200μg/m3)"
+      }
     }
   }
   dimension: barrapm10{
     case: {
       when: {
-        sql: ${pm10} > 50;;
-        label: "(50-100μg/m3)"
+        sql: ${pm10} < 25;;
+        label: "(0-25μg/m3)"
       }
-      else: "(0-50μg/m3)"
+      when: {
+        sql: ${pm10} >= 25 AND ${pm10} < 50;;
+        label: "(25-50μg/m3)"
+      }
+      when: {
+        sql: ${pm10} >= 50 AND ${pm10} < 75;;
+        label: "(50-75μg/m3)"
+      }
+      when: {
+        sql: ${pm10} >= 75 AND ${pm10} < 100;;
+        label: "(75-100μg/m3)"
+      }
+      when: {
+        sql: ${pm10} >= 100;;
+        label: "(100 - 200μg/m3)"
+      }
     }
   }
   dimension: barraco2{
     case: {
-      when: {
-        sql: ${co2} > 50;;
-        label: "(50-100μg/m3)"
-      }
-      else: "(0-50μg/m3)"
+     when: {
+      sql: ${co2} < 25;;
+      label: "(0-25μg/m3)"
+    }
+    when: {
+      sql: ${co2} >= 25 AND ${co2} < 50;;
+      label: "(25-50μg/m3)"
+    }
+    when: {
+      sql: ${co2} >= 50 AND ${co2} < 75;;
+      label: "(50-75μg/m3)"
+    }
+    when: {
+      sql: ${co2} >= 75 AND ${co2} < 100;;
+      label: "(75-100μg/m3)"
+    }
+    when: {
+      sql: ${co2} >= 100;;
+      label: "(100 - 200μg/m3)"
+    }
     }
   }
   dimension: barratvoc{
     case: {
       when: {
-        sql: ${tvoc} > 50;;
-        label: "(50-100μg/m3)"
+        sql: ${tvoc} < 25;;
+        label: "(0-25μg/m3)"
       }
-      else: "(0-50μg/m3)"
+      when: {
+        sql: ${tvoc} >= 25 AND ${tvoc} < 50;;
+        label: "(25-50μg/m3)"
+      }
+      when: {
+        sql: ${tvoc} >= 50 AND ${tvoc} < 75;;
+        label: "(50-75μg/m3)"
+      }
+      when: {
+        sql: ${tvoc} >= 75 AND ${tvoc} < 100;;
+        label: "(75-100μg/m3)"
+      }
+      when: {
+        sql: ${tvoc} >= 100;;
+        label: "(100 - 200μg/m3)"
+      }
     }
   }
 }
