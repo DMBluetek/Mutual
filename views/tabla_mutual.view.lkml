@@ -139,7 +139,7 @@ view: tabla_mutual {
   dimension: estadopmCO2{
     case: {
       when: {
-        sql: ${co2} <= 50 AND ${co2} >= 0;;
+        sql: ${co2} <= 50;;
         label: "En Rango"
       }
       when: {
