@@ -152,7 +152,7 @@ view: tabla_mutual {
   dimension: estadoTVOC{
     case: {
       when: {
-        sql: ${tvoc} <= 50 AND ${tvoc} >= 0;;
+        sql: ${tvoc} <= 50;;
         label: "En Rango"
       }
       when: {
@@ -339,7 +339,10 @@ view: tabla_mutual {
         sql: ${pm2_5} > 50;;
         label: "(50-100μg/m3)"
       }
-      else: "(0-50μg/m3)"
+      when: {
+        sql: ${pm2_5} <= 50;;
+        label: "(0-50μg/m3)"
+      }
     }
   }
   dimension: barrapm1{
@@ -348,7 +351,10 @@ view: tabla_mutual {
         sql: ${pm1} > 50;;
         label: "(50-100μg/m3)"
       }
-      else: "(0-50μg/m3)"
+     when: {
+      sql: ${pm1} <= 50;;
+      label: "(0-50μg/m3)"
+    }
     }
   }
   dimension: barrapm10{
@@ -357,7 +363,10 @@ view: tabla_mutual {
         sql: ${pm10} > 50;;
         label: "(50-100μg/m3)"
       }
-      else: "(0-50μg/m3)"
+      when: {
+        sql: ${pm10} <= 50;;
+        label: "(0-50μg/m3)"
+      }
     }
   }
   dimension: barraco2{
@@ -366,7 +375,10 @@ view: tabla_mutual {
         sql: ${co2} > 50;;
         label: "(50-100μg/m3)"
       }
-      else: "(0-50μg/m3)"
+      when: {
+        sql: ${co2} <= 50;;
+        label: "(0-50μg/m3)"
+      }
     }
   }
   dimension: barratvoc{
@@ -375,7 +387,10 @@ view: tabla_mutual {
         sql: ${tvoc} > 50;;
         label: "(50-100μg/m3)"
       }
-      else: "(0-50μg/m3)"
+      when: {
+        sql: ${tvoc} <= 50;;
+        label: "(0-50μg/m3)"
+      }
     }
   }
 }
