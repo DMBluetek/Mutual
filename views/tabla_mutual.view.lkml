@@ -76,36 +76,72 @@ view: tabla_mutual {
   dimension: estadoRH{
     case: {
       when: {
-        sql: ${rh} <= 50 AND ${rh} >= 30;;
-        label: "En Rango"
+        sql: ${rh}< 25;;
+        label: "Bueno"
       }
       when: {
-        sql: ${rh} > 50 OR ${rh} < 30;;
-        label: "Fuera de Rango"
-    }
+        sql: ${rh} <= 25 AND ${rh}> 50;;
+        label: "Regular"
+      }
+      when: {
+        sql: ${rh} <= 50 AND ${rh} > 75;;
+        label: "Alerta"
+      }
+      when: {
+        sql: ${rh}<= 75 AND ${rh} > 100;;
+        label: "Pre-Emergencia"
+      }
+      when: {
+        sql: ${rh} <= 100;;
+        label: "Emergencia"
+      }
   }
   }
   dimension: estadoT{
     case: {
       when: {
-        sql: ${t} <= 24 AND ${t} >= 18;;
-        label: "En Rango"
+        sql: ${t} < 25;;
+        label: "Bueno"
       }
       when: {
-        sql: ${t} > 24 OR ${t} < 18;;
-        label: "Fuera de rango"
+        sql: ${t} <= 25 AND ${t}> 50;;
+        label: "Regular"
+      }
+      when: {
+        sql: ${t} <= 50 AND ${t} > 75;;
+        label: "Alerta"
+      }
+      when: {
+        sql: ${t}<= 75 AND ${t} > 100;;
+        label: "Pre-Emergencia"
+      }
+      when: {
+        sql: ${t} <= 100;;
+        label: "Emergencia"
       }
     }
   }
   dimension: estadopm2_5{
     case: {
       when: {
-        sql: ${pm2_5} <= 50 AND ${pm2_5} >= 0;;
-        label: "En Rango"
+        sql: ${pm2_5} < 25;;
+        label: "Bueno"
       }
       when: {
-        sql: ${pm2_5} > 50;;
-        label: "Fuera de Rango"
+        sql: ${pm2_5} <= 25 AND ${pm2_5} > 50;;
+        label: "Regular"
+      }
+      when: {
+        sql: ${pm2_5} <= 50 AND ${pm2_5} > 75;;
+        label: "Alerta"
+      }
+      when: {
+        sql: ${pm2_5} <= 75 AND ${pm2_5} > 100;;
+        label: "Pre-Emergencia"
+      }
+      when: {
+        sql: ${pm2_5} <= 100;;
+        label: "Emergencia"
       }
     }
   }
@@ -113,12 +149,24 @@ view: tabla_mutual {
   dimension: estadopm10{
     case: {
       when: {
-        sql: ${pm10} <= 50 AND ${pm10} >= 0;;
-        label: "En Rango"
+        sql: ${pm10} < 25;;
+        label: "Bueno"
       }
       when: {
-        sql: ${pm10} > 50;;
-        label: "Fuera de Rango"
+        sql: ${pm10} <= 25 AND ${pm10} > 50;;
+        label: "Regular"
+      }
+      when: {
+        sql: ${pm10} <= 50 AND ${pm10} > 75;;
+        label: "Alerta"
+      }
+      when: {
+        sql: ${pm10} <= 75 AND ${pm10} > 100;;
+        label: "Pre-Emergencia"
+      }
+      when: {
+        sql: ${pm10} <= 100;;
+        label: "Emergencia"
       }
     }
   }
@@ -126,12 +174,24 @@ view: tabla_mutual {
   dimension: estadopm1{
     case: {
       when: {
-        sql: ${pm1} <= 50 AND ${pm1} >= 0;;
-        label: "En Rango"
+        sql: ${pm1} < 25;;
+        label: "Bueno"
       }
       when: {
-        sql: ${pm1} > 50;;
-        label: "Fuera de Rango"
+        sql: ${pm1} <= 25 AND ${pm1}> 50;;
+        label: "Regular"
+      }
+      when: {
+        sql: ${pm1} <= 50 AND ${pm1} > 75;;
+        label: "Alerta"
+      }
+      when: {
+        sql: ${pm1}<= 75 AND ${pm1} > 100;;
+        label: "Pre-Emergencia"
+      }
+      when: {
+        sql: ${pm1} <= 100;;
+        label: "Emergencia"
       }
     }
   }
@@ -139,12 +199,24 @@ view: tabla_mutual {
   dimension: estadoCO2{
     case: {
       when: {
-        sql: ${co2} <= 50;;
-        label: "En Rango"
+        sql: ${co2} < 25;;
+        label: "Bueno"
       }
       when: {
-        sql: ${co2} > 50;;
-        label: "Fuera de Rango"
+        sql: ${co2} <= 25 AND ${co2}> 50;;
+        label: "Regular"
+      }
+      when: {
+        sql: ${co2} <= 50 AND ${co2} > 75;;
+        label: "Alerta"
+      }
+      when: {
+        sql: ${co2}<= 75 AND ${co2} > 100;;
+        label: "Pre-Emergencia"
+      }
+      when: {
+        sql: ${co2} <= 100;;
+        label: "Emergencia"
       }
     }
   }
@@ -152,12 +224,24 @@ view: tabla_mutual {
   dimension: estadoTVOC{
     case: {
       when: {
-        sql: ${tvoc} <= 50;;
-        label: "En Rango"
+        sql: ${tvoc} < 25;;
+        label: "Bueno"
       }
       when: {
-        sql: ${tvoc} > 50;;
-        label: "Fuera de Rango"
+        sql: ${tvoc} <= 25 AND ${tvoc}> 50;;
+        label: "Regular"
+      }
+      when: {
+        sql: ${tvoc} <= 50 AND ${tvoc} > 75;;
+        label: "Alerta"
+      }
+      when: {
+        sql: ${tvoc}<= 75 AND ${tvoc} > 100;;
+        label: "Pre-Emergencia"
+      }
+      when: {
+        sql: ${tvoc} <= 100;;
+        label: "Emergencia"
       }
     }
   }
