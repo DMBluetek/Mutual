@@ -437,7 +437,7 @@ view: tabla_mutual {
       }
       when: {
         sql: ${pm2_5} >= 100;;
-        label: "(100 - 200μg/m3)"
+        label: "(100-200μg/m3)"
       }
     }
   }
@@ -461,7 +461,7 @@ view: tabla_mutual {
       }
       when: {
         sql: ${pm1} >= 100;;
-        label: "(100 - 200μg/m3)"
+        label: "(100-200μg/m3)"
       }
     }
   }
@@ -485,7 +485,7 @@ view: tabla_mutual {
       }
       when: {
         sql: ${pm10} >= 100;;
-        label: "(100 - 200μg/m3)"
+        label: "(100-200μg/m3)"
       }
     }
   }
@@ -509,7 +509,7 @@ view: tabla_mutual {
     }
     when: {
       sql: ${co2} >= 100;;
-      label: "(100 - 200μg/m3)"
+      label: "(100-200μg/m3)"
     }
     }
   }
@@ -533,7 +533,7 @@ view: tabla_mutual {
       }
       when: {
         sql: ${tvoc} >= 100;;
-        label: "(100 - 200μg/m3)"
+        label: "(100-200μg/m3)"
       }
     }
   }
