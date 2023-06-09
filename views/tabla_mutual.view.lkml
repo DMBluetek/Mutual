@@ -80,19 +80,19 @@ view: tabla_mutual {
         label: "Bueno"
       }
       when: {
-        sql: ${rh} <= 25 AND ${rh}> 50;;
+        sql: ${rh} >= 25 AND ${rh}< 50;;
         label: "Regular"
       }
       when: {
-        sql: ${rh} <= 50 AND ${rh} > 75;;
+        sql: ${rh} >= 50 AND ${rh} < 75;;
         label: "Alerta"
       }
       when: {
-        sql: ${rh}<= 75 AND ${rh} > 100;;
+        sql: ${rh}>= 75 AND ${rh} < 100;;
         label: "Pre-Emergencia"
       }
       when: {
-        sql: ${rh} <= 100;;
+        sql: ${rh} >= 100;;
         label: "Emergencia"
       }
   }
@@ -104,19 +104,19 @@ view: tabla_mutual {
         label: "Bueno"
       }
       when: {
-        sql: ${t} <= 25 AND ${t}> 50;;
+        sql: ${t} >= 25 AND ${t}< 50;;
         label: "Regular"
       }
       when: {
-        sql: ${t} <= 50 AND ${t} > 75;;
+        sql: ${t} >= 50 AND ${t} < 75;;
         label: "Alerta"
       }
       when: {
-        sql: ${t}<= 75 AND ${t} > 100;;
+        sql: ${t}>= 75 AND ${t} < 100;;
         label: "Pre-Emergencia"
       }
       when: {
-        sql: ${t} <= 100;;
+        sql: ${t} >= 100;;
         label: "Emergencia"
       }
     }
@@ -128,19 +128,19 @@ view: tabla_mutual {
         label: "Bueno"
       }
       when: {
-        sql: ${pm2_5} <= 25 AND ${pm2_5} > 50;;
+        sql: ${pm2_5} >= 25 AND ${pm2_5} < 50;;
         label: "Regular"
       }
       when: {
-        sql: ${pm2_5} <= 50 AND ${pm2_5} > 75;;
+        sql: ${pm2_5} >= 50 AND ${pm2_5} < 75;;
         label: "Alerta"
       }
       when: {
-        sql: ${pm2_5} <= 75 AND ${pm2_5} > 100;;
+        sql: ${pm2_5} >= 75 AND ${pm2_5} < 100;;
         label: "Pre-Emergencia"
       }
       when: {
-        sql: ${pm2_5} <= 100;;
+        sql: ${pm2_5} >= 100;;
         label: "Emergencia"
       }
     }
@@ -153,19 +153,19 @@ view: tabla_mutual {
         label: "Bueno"
       }
       when: {
-        sql: ${pm10} <= 25 AND ${pm10} > 50;;
+        sql: ${pm10} >= 25 AND ${pm10} < 50;;
         label: "Regular"
       }
       when: {
-        sql: ${pm10} <= 50 AND ${pm10} > 75;;
+        sql: ${pm10} >= 50 AND ${pm10} < 75;;
         label: "Alerta"
       }
       when: {
-        sql: ${pm10} <= 75 AND ${pm10} > 100;;
+        sql: ${pm10} >= 75 AND ${pm10} < 100;;
         label: "Pre-Emergencia"
       }
       when: {
-        sql: ${pm10} <= 100;;
+        sql: ${pm10} >= 100;;
         label: "Emergencia"
       }
     }
@@ -178,19 +178,19 @@ view: tabla_mutual {
         label: "Bueno"
       }
       when: {
-        sql: ${pm1} <= 25 AND ${pm1}> 50;;
+        sql: ${pm1} >= 25 AND ${pm1}< 50;;
         label: "Regular"
       }
       when: {
-        sql: ${pm1} <= 50 AND ${pm1} > 75;;
+        sql: ${pm1} >= 50 AND ${pm1} < 75;;
         label: "Alerta"
       }
       when: {
-        sql: ${pm1}<= 75 AND ${pm1} > 100;;
+        sql: ${pm1}>= 75 AND ${pm1} < 100;;
         label: "Pre-Emergencia"
       }
       when: {
-        sql: ${pm1} <= 100;;
+        sql: ${pm1} >= 100;;
         label: "Emergencia"
       }
     }
@@ -203,19 +203,19 @@ view: tabla_mutual {
         label: "Bueno"
       }
       when: {
-        sql: ${co2} <= 25 AND ${co2}> 50;;
+        sql: ${co2} >= 25 AND ${co2}< 50;;
         label: "Regular"
       }
       when: {
-        sql: ${co2} <= 50 AND ${co2} > 75;;
+        sql: ${co2} >= 50 AND ${co2} < 75;;
         label: "Alerta"
       }
       when: {
-        sql: ${co2}<= 75 AND ${co2} > 100;;
+        sql: ${co2}>= 75 AND ${co2} < 100;;
         label: "Pre-Emergencia"
       }
       when: {
-        sql: ${co2} <= 100;;
+        sql: ${co2} >= 100;;
         label: "Emergencia"
       }
     }
@@ -228,19 +228,19 @@ view: tabla_mutual {
         label: "Bueno"
       }
       when: {
-        sql: ${tvoc} <= 25 AND ${tvoc}> 50;;
+        sql: ${tvoc} >= 25 AND ${tvoc}< 50;;
         label: "Regular"
       }
       when: {
-        sql: ${tvoc} <= 50 AND ${tvoc} > 75;;
+        sql: ${tvoc} >= 50 AND ${tvoc} < 75;;
         label: "Alerta"
       }
       when: {
-        sql: ${tvoc}<= 75 AND ${tvoc} > 100;;
+        sql: ${tvoc}>= 75 AND ${tvoc} < 100;;
         label: "Pre-Emergencia"
       }
       when: {
-        sql: ${tvoc} <= 100;;
+        sql: ${tvoc} >= 100;;
         label: "Emergencia"
       }
     }
