@@ -136,7 +136,7 @@ view: tabla_mutual {
     }
   }
 
-  dimension: estadopmCO2{
+  dimension: estadoCO2{
     case: {
       when: {
         sql: ${co2} <= 50;;
@@ -149,7 +149,7 @@ view: tabla_mutual {
     }
   }
 
-  dimension: estadopmTVOC{
+  dimension: estadoTVOC{
     case: {
       when: {
         sql: ${tvoc} <= 50 AND ${tvoc} >= 0;;
