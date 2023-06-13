@@ -391,15 +391,15 @@ view: tabla_mutual {
         label: "(0-10%)"
       }
       when: {
-        sql: ${rh} >= 10 AND ${t} <30;;
+        sql: ${rh} >= 10 AND ${rh} <30;;
         label: "(10-30%)"
       }
       when: {
-        sql: ${rh} >= 30 AND ${t} <50;;
+        sql: ${rh} >= 30 AND ${rh} <50;;
         label: "(30-50%)"
       }
       when: {
-        sql: ${rh} >= 50 AND ${t} <75;;
+        sql: ${rh} >= 50 AND ${rh} <75;;
         label: "(50-75%)"
       }
       when: {
