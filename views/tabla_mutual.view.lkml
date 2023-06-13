@@ -124,19 +124,19 @@ view: tabla_mutual {
   dimension: estadopm2_5{
     case: {
       when: {
-        sql: ${pm2_5} < 49;;
+        sql: ${pm2_5} < 50;;
         label: "Bueno"
       }
       when: {
-        sql: ${pm2_5} >= 50 AND ${pm2_5} < 79;;
+        sql: ${pm2_5} >= 50 AND ${pm2_5} < 80;;
         label: "Regular"
       }
       when: {
-        sql: ${pm2_5} >= 80 AND ${pm2_5} < 109;;
+        sql: ${pm2_5} >= 80 AND ${pm2_5} < 110;;
         label: "Alerta"
       }
       when: {
-        sql: ${pm2_5} >= 110 AND ${pm2_5} < 169;;
+        sql: ${pm2_5} >= 110 AND ${pm2_5} < 170;;
         label: "Pre-Emergencia"
       }
       when: {
@@ -149,18 +149,18 @@ view: tabla_mutual {
   dimension: estadopm10{
     case: {
       when: {
-        sql: ${pm10} < 129;;
+        sql: ${pm10} < 130;;
         label: "Bueno"
       }
       when: {
-        sql: ${pm10} >= 130 AND ${pm10} < 179;;
+        sql: ${pm10} >= 130 AND ${pm10} < 180;;
         label: "Regular"
       }
       when: {
-        sql: ${pm10} >= 180 AND ${pm10} < 229;;
+        sql: ${pm10} >= 180 AND ${pm10} < 230;;
       }
       when: {
-        sql: ${pm10} >= 230 AND ${pm10} < 329;;
+        sql: ${pm10} >= 230 AND ${pm10} < 330;;
         label: "Pre-Emergencia"
       }
       when: {
@@ -435,19 +435,19 @@ view: tabla_mutual {
   dimension: barrapm2_5{
     case: {
       when: {
-        sql: ${pm2_5} < 49;;
+        sql: ${pm2_5} < 50;;
         label: "(0-50μg/m3)"
       }
       when: {
-        sql: ${pm2_5} >= 50 AND ${pm2_5} < 79;;
+        sql: ${pm2_5} >= 50 AND ${pm2_5} < 80;;
         label: "(50-80μg/m3)"
       }
       when: {
-        sql: ${pm2_5} >= 80 AND ${pm2_5} < 109;;
+        sql: ${pm2_5} >= 80 AND ${pm2_5} < 110;;
         label: "(80-110μg/m3)"
       }
       when: {
-        sql: ${pm2_5} >= 109 AND ${pm2_5} < 169;;
+        sql: ${pm2_5} >= 109 AND ${pm2_5} < 170;;
         label: "(110-170μg/m3)"
       }
       when: {
@@ -483,19 +483,19 @@ view: tabla_mutual {
   dimension: barrapm10{
     case: {
       when: {
-        sql: ${pm10} < 129;;
+        sql: ${pm10} < 130;;
         label: "(0-130μg/m3)"
       }
       when: {
-        sql: ${pm10} >= 130 AND ${pm10} < 179;;
+        sql: ${pm10} >= 130 AND ${pm10} < 180;;
         label: "(130-180μg/m3)"
       }
       when: {
-        sql: ${pm10} >= 180 AND ${pm10} < 229;;
+        sql: ${pm10} >= 180 AND ${pm10} < 230;;
         label: "(180-230μg/m3)"
       }
       when: {
-        sql: ${pm10} >= 230 AND ${pm10} < 329;;
+        sql: ${pm10} >= 230 AND ${pm10} < 330;;
         label: "(230-330μg/m3)"
       }
       when: {
