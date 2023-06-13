@@ -69,7 +69,7 @@ dimension: t {
   measure: Horas {
     type: number
     sql: ${count} * 1/60 ;;
-    drill_fields: []
+    drill_fields: [min_rh, rh]
     value_format: "0\" Horas\""
   }
   measure: 15min {
@@ -81,7 +81,7 @@ dimension: t {
   dimension: estadoRH{
     case: {
       when: {
-        sql: ${rh}< 10;;
+        sql: ${rh} < 10;;
         label: "Muy bajo"
       }
       when: {
