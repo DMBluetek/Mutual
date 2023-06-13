@@ -76,48 +76,48 @@ view: tabla_mutual {
   dimension: estadoRH{
     case: {
       when: {
-        sql: ${rh}< 25;;
-        label: "Bueno"
+        sql: ${rh}< 10;;
+        label: "Muy bajo"
       }
       when: {
-        sql: ${rh} >= 25 AND ${rh}< 50;;
-        label: "Regular"
+        sql: ${rh} >= 10 AND ${rh}< 30;;
+        label: "Bajo"
+      }
+      when: {
+        sql: ${rh} >= 30 AND ${rh} < 50;;
+        label: "Normal"
       }
       when: {
         sql: ${rh} >= 50 AND ${rh} < 75;;
-        label: "Alerta"
+        label: "Alto"
       }
       when: {
-        sql: ${rh}>= 75 AND ${rh} < 100;;
-        label: "Pre-Emergencia"
-      }
-      when: {
-        sql: ${rh} >= 100;;
-        label: "Emergencia"
+        sql: ${rh} >= 75;;
+        label: "Muy alto"
       }
   }
   }
   dimension: estadoT{
     case: {
       when: {
-        sql: ${t} < 25;;
-        label: "Bueno"
+        sql: ${t} < 12;;
+        label: "Muy bajo"
       }
       when: {
-        sql: ${t} >= 25 AND ${t}< 50;;
-        label: "Regular"
+        sql: ${t} >= 12 AND ${t}< 18;;
+        label: "Bajo"
       }
       when: {
-        sql: ${t} >= 50 AND ${t} < 75;;
-        label: "Alerta"
+        sql: ${t} >= 18 AND ${t} < 24;;
+        label: "Normal"
       }
       when: {
-        sql: ${t}>= 75 AND ${t} < 100;;
-        label: "Pre-Emergencia"
+        sql: ${t}>= 24 AND ${t} < 32;;
+        label: "Alto"
       }
       when: {
-        sql: ${t} >= 100;;
-        label: "Emergencia"
+        sql: ${t} >= 32;;
+        label: "Muy alto"
       }
     }
   }
@@ -363,32 +363,48 @@ view: tabla_mutual {
   dimension: barraT{
     case: {
       when: {
-        sql: ${t} < 18;;
+        sql: ${t} < 12;;
+        label: "(-12°C)"
+      }
+      when: {
+        sql: ${t} >= 12 AND ${t} <18;;
         label: "(12-18°C)"
       }
       when: {
-        sql: ${t} >= 18 AND ${t} <=24;;
+        sql: ${t} >= 18 AND ${t} <24;;
         label: "(18-24°C)"
       }
       when: {
-        sql: ${t} > 24;;
-        label: "(24-30°C)"
+        sql: ${t} >= 24 AND ${t} <32;;
+        label: "(24-32°C)"
+      }
+      when: {
+        sql: ${t} >= 32;;
+        label: "(32°-C)"
       }
     }
   }
   dimension: barraRH{
     case: {
       when: {
-        sql: ${rh} < 30;;
+        sql: ${rh} < 10;;
+        label: "(0-10%)"
+      }
+      when: {
+        sql: ${rh} >= 10 AND ${t} <30;;
         label: "(10-30%)"
       }
       when: {
-        sql: ${rh} >= 30 AND ${t} <=50;;
+        sql: ${rh} >= 30 AND ${t} <50;;
         label: "(30-50%)"
       }
       when: {
-        sql: ${rh} > 50;;
-        label: "(50-70%)"
+        sql: ${rh} >= 50 AND ${t} <75;;
+        label: "(50-75%)"
+      }
+      when: {
+        sql: ${rh} >= 75;;
+        label: "(75-100%)"
       }
     }
   }
