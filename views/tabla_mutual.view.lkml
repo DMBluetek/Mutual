@@ -158,6 +158,7 @@ view: tabla_mutual {
       }
       when: {
         sql: ${pm10} >= 180 AND ${pm10} < 230;;
+        label: "Alerta"
       }
       when: {
         sql: ${pm10} >= 230 AND ${pm10} < 330;;
@@ -171,28 +172,28 @@ view: tabla_mutual {
   }
 
   dimension: estadopm1{
-    case: {
-      when: {
-        sql: ${pm1} < 25;;
-        label: "Bueno"
-      }
-      when: {
-        sql: ${pm1} >= 25 AND ${pm1}< 50;;
-        label: "Regular"
-      }
-      when: {
-        sql: ${pm1} >= 50 AND ${pm1} < 75;;
-        label: "Alerta"
-      }
-      when: {
-        sql: ${pm1}>= 75 AND ${pm1} < 100;;
-        label: "Pre-Emergencia"
-      }
-      when: {
-        sql: ${pm1} >= 100;;
-        label: "Emergencia"
-      }
+   case: {
+    when: {
+      sql: ${pm1} < 45;;
+      label: "Bueno"
     }
+    when: {
+      sql: ${pm1} >= 45 AND ${pm1} < 72;;
+      label: "Regular"
+    }
+    when: {
+      sql: ${pm1} >= 72 AND ${pm1} < 99;;
+      label: "Alerta"
+    }
+    when: {
+      sql: ${pm1} >= 99 AND ${pm1} < 153;;
+      label: "Pre-Emergencia"
+    }
+    when: {
+      sql: ${pm1} >= 153;;
+      label: "Emergencia"
+    }
+  }
   }
 
   dimension: estadoCO2{
@@ -457,26 +458,26 @@ view: tabla_mutual {
     }
   }
   dimension: barrapm1{
-    case: {
+     case: {
       when: {
-        sql: ${pm1} < 25;;
-        label: "(0-25μg/m3)"
+        sql: ${pm1} < 45;;
+        label: "(0-45μg/m3)"
       }
       when: {
-        sql: ${pm1} >= 25 AND ${pm1} < 50;;
-        label: "(25-50μg/m3)"
+        sql: ${pm1} >= 45 AND ${pm1} < 72;;
+        label: "(45-72μg/m3)"
       }
       when: {
-        sql: ${pm1} >= 50 AND ${pm1} < 75;;
-        label: "(50-75μg/m3)"
+        sql: ${pm1} >= 72 AND ${pm1} < 99;;
+        label: "(72-99μg/m3)"
       }
       when: {
-        sql: ${pm1} >= 75 AND ${pm1} < 100;;
-        label: "(75-100μg/m3)"
+        sql: ${pm1} >= 99 AND ${pm1} < 153;;
+        label: "(99-153μg/m3)"
       }
       when: {
-        sql: ${pm1} >= 100;;
-        label: "(100-200μg/m3)"
+        sql: ${pm1} >= 153;;
+        label: "(153-500μg/m3)"
       }
     }
   }
