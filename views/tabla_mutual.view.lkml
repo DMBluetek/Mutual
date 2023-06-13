@@ -6,7 +6,7 @@ view: tabla_mutual {
     sql: ${TABLE}.CO2 ;;
   }
 
-  dimension: id_disp {
+  dimension: id {
     type: string
     sql: ${TABLE}.id;;
   }
@@ -14,28 +14,31 @@ view: tabla_mutual {
   dimension: pm1 {
     type: number
     sql: ${TABLE}.pm1 ;;
+    value_format: "0.0\" μg/m3\""
   }
 
   dimension: pm10 {
     type: number
     sql: ${TABLE}.pm10 ;;
+    value_format: "0.0\" μg/m3\""
   }
 
   dimension: pm2_5 {
     type: number
     sql: ${TABLE}.pm2_5 ;;
+    value_format: "0.0\" μg/m3\""
   }
 
   dimension: rh {
     type: number
     sql: ${TABLE}.RH ;;
-    value_format: "0.0"
+    value_format: "0.0\%"
   }
 
   dimension: t {
     type: number
     sql: ${TABLE}.T ;;
-    value_format: "0.0"
+    value_format: "0.0\" °C\""
   }
 
   dimension_group: time {
