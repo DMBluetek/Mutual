@@ -4,6 +4,7 @@ view: tabla_mutual {
 dimension: co2 {
   type: number
   sql: ${TABLE}.CO2 ;;
+  value_format: "0.0\" μg/m3\""
 }
 
 dimension: id_disp {
@@ -58,6 +59,7 @@ dimension: t {
   dimension: tvoc {
     type: number
     sql: ${TABLE}.TVOC ;;
+    value_format: "0.0\" μg/m3\""
   }
 
   measure: count {
