@@ -1,45 +1,45 @@
 view: tabla_mutual {
   sql_table_name: dbo.BluesenseOfi ;;
 
-  dimension: co2 {
-    type: number
-    sql: ${TABLE}.CO2 ;;
-  }
+dimension: co2 {
+  type: number
+  sql: ${TABLE}.CO2 ;;
+}
 
-  dimension: id {
-    type: string
-    sql: ${TABLE}.id;;
-  }
+dimension: id_disp {
+  type: string
+  sql: ${TABLE}.id;;
+}
 
-  dimension: pm1 {
-    type: number
-    sql: ${TABLE}.pm1 ;;
-    value_format: "0.0\" μg/m3\""
-  }
+dimension: pm1 {
+  type: number
+  sql: ${TABLE}.pm1 ;;
+  value_format: "0.0\" μg/m3\""
+}
 
-  dimension: pm10 {
-    type: number
-    sql: ${TABLE}.pm10 ;;
-    value_format: "0.0\" μg/m3\""
-  }
+dimension: pm10 {
+  type: number
+  sql: ${TABLE}.pm10 ;;
+  value_format: "0.0\" μg/m3\""
+}
 
-  dimension: pm2_5 {
-    type: number
-    sql: ${TABLE}.pm2_5 ;;
-    value_format: "0.0\" μg/m3\""
-  }
+dimension: pm2_5 {
+  type: number
+  sql: ${TABLE}.pm2_5 ;;
+  value_format: "0.0\" μg/m3\""
+}
 
-  dimension: rh {
-    type: number
-    sql: ${TABLE}.RH ;;
-    value_format: "0.0\%"
-  }
+dimension: rh {
+  type: number
+  sql: ${TABLE}.RH ;;
+  value_format: "0.0\%"
+}
 
-  dimension: t {
-    type: number
-    sql: ${TABLE}.T ;;
-    value_format: "0.0\" °C\""
-  }
+dimension: t {
+  type: number
+  sql: ${TABLE}.T ;;
+  value_format: "0.0\" °C\""
+}
 
   dimension_group: time {
     type: time
