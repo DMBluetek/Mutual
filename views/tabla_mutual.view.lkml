@@ -453,7 +453,7 @@ view: tabla_mutual {
       }
       when: {
         sql: ${pm2_5} >= 170;;
-        label: "(170-500μg/m3)"
+        label: "(170-μg/m3)"
       }
     }
   }
@@ -477,7 +477,7 @@ view: tabla_mutual {
       }
       when: {
         sql: ${pm1} >= 153;;
-        label: "(153-500μg/m3)"
+        label: "(153-μg/m3)"
       }
     }
   }
@@ -501,7 +501,7 @@ view: tabla_mutual {
       }
       when: {
         sql: ${pm10} >= 330;;
-        label: "(330-500μg/m3)"
+        label: "(330-μg/m3)"
       }
     }
   }
