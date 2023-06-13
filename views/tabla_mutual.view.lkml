@@ -364,7 +364,7 @@ view: tabla_mutual {
     case: {
       when: {
         sql: ${t} < 12;;
-        label: "(-12°C)"
+        label: "(0-12°C)"
       }
       when: {
         sql: ${t} >= 12 AND ${t} <18;;
@@ -380,7 +380,7 @@ view: tabla_mutual {
       }
       when: {
         sql: ${t} >= 32;;
-        label: "(32°-C)"
+        label: "(32-50°C)"
       }
     }
   }
