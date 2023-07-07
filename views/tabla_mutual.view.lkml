@@ -77,6 +77,10 @@ dimension: t {
     sql: ${count} /3 ;;
     drill_fields: []
   }
+  measure: Uptime {
+    type: number
+    sql:  ${count} * 1/10080 ;;
+  }
 
   dimension: estadoRH{
     case: {
