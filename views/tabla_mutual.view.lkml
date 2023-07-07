@@ -80,6 +80,7 @@ dimension: t {
   measure: Uptime {
     type: number
     sql:  ${count} * 1/1008 ;;
+    value_format: "0\" %\""
   }
 
   dimension: estadoRH{
