@@ -79,7 +79,7 @@ dimension: t {
   }
   measure: Uptime {
     type: number
-    sql:  ${count} *100/10080 ;;
+    sql:  ${count} *100/60480 ;;
     value_format: "0\" %\""
   }
 
