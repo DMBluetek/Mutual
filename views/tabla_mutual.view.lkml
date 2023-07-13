@@ -346,7 +346,7 @@ dimension: t {
   }
   measure: max_pm10saturado {
     type: max
-    sql: CASE WHEN ${pm2_5} > 500 THEN 500 ELSE ${pm2_5} END ;;
+    sql: CASE WHEN ${pm10} > 500 THEN 500 ELSE ${pm10} END ;;
     value_format: "0.0\" μg/m3\""
   }
   measure: min_pm10 {
@@ -361,7 +361,7 @@ dimension: t {
   }
   measure: max_pm1saturado {
     type: max
-    sql: CASE WHEN ${pm2_5} > 500 THEN 500 ELSE ${pm2_5} END ;;
+    sql: CASE WHEN ${pm1} > 500 THEN 500 ELSE ${pm1} END ;;
     value_format: "0.0\" μg/m3\""
   }
   measure: min_pm1 {
