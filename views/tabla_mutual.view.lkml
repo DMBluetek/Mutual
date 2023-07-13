@@ -390,7 +390,7 @@ dimension: t {
     value_format: "0.0\" μg/m3\""
   }
 
-  dimension: idpersonalizado {
+  dimension: camiones {
     case: {
       when: {
         sql: ${TABLE}.id = 'BS-100L-00013';;
