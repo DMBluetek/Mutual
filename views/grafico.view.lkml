@@ -29,17 +29,17 @@ view: grafico {
     sql: ${TABLE}."tabla_mutual.time_date" ;;
   }
 
-  dimension: tabla_mutual_max_pm2_5 {
+  measure: tabla_mutual_max_pm2_5 {
     type: number
     sql: ${TABLE}."tabla_mutual.max_pm2_5" ;;
   }
 
-  dimension: tabla_mutual_min_pm2_5 {
+  measure: tabla_mutual_min_pm2_5 {
     type: number
     sql: ${TABLE}."tabla_mutual.min_pm2_5" ;;
   }
 
-  dimension: tabla_mutual_avg_pm2_5 {
+  measure: tabla_mutual_avg_pm2_5 {
     type: number
     sql: ${TABLE}."tabla_mutual.avg_pm2_5" ;;
   }
@@ -47,9 +47,9 @@ view: grafico {
   set: detail {
     fields: [
         tabla_mutual_time_date,
-	tabla_mutual_max_pm2_5,
-	tabla_mutual_min_pm2_5,
-	tabla_mutual_avg_pm2_5
+  tabla_mutual_max_pm2_5,
+  tabla_mutual_min_pm2_5,
+  tabla_mutual_avg_pm2_5
     ]
   }
 }
