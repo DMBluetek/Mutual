@@ -568,48 +568,40 @@ dimension: t {
   dimension: barraco2{
     case: {
      when: {
-      sql: ${co2} < 25;;
-      label: "(0-25μg/m3)"
+      sql: ${co2} < 700;;
+      label: "(0-700ppm)"
     }
     when: {
-      sql: ${co2} >= 25 AND ${co2} < 50;;
-      label: "(25-50μg/m3)"
+      sql: ${co2} >= 700 AND ${co2} < 1000;;
+      label: "(700-1000ppm)"
     }
     when: {
-      sql: ${co2} >= 50 AND ${co2} < 75;;
-      label: "(50-75μg/m3)"
+      sql: ${co2} >= 1000 AND ${co2} < 2000;;
+      label: "(1000-2000ppm)"
     }
     when: {
-      sql: ${co2} >= 75 AND ${co2} < 100;;
-      label: "(75-100μg/m3)"
+      sql: ${co2} >= 2000 AND ${co2} < 3000;;
+      label: "(2000-3000ppm)"
     }
     when: {
-      sql: ${co2} >= 100;;
-      label: "(100-200μg/m3)"
+      sql: ${co2} >= 3000;;
+      label: "(3000-5000ppm)"
     }
     }
   }
   dimension: barratvoc{
     case: {
       when: {
-        sql: ${tvoc} < 25;;
-        label: "(0-25μg/m3)"
+        sql: ${tvoc} < 400;;
+        label: "(0-400ppm)"
       }
       when: {
-        sql: ${tvoc} >= 25 AND ${tvoc} < 50;;
-        label: "(25-50μg/m3)"
+        sql: ${tvoc} >= 400 AND ${tvoc} < 800;;
+        label: "(400-800ppm)"
       }
       when: {
-        sql: ${tvoc} >= 50 AND ${tvoc} < 75;;
-        label: "(50-75μg/m3)"
-      }
-      when: {
-        sql: ${tvoc} >= 75 AND ${tvoc} < 100;;
-        label: "(75-100μg/m3)"
-      }
-      when: {
-        sql: ${tvoc} >= 100;;
-        label: "(100-200μg/m3)"
+        sql: ${tvoc} >= 800;;
+        label: "(800-1500ppm)"
       }
     }
   }
