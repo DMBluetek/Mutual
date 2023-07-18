@@ -72,6 +72,12 @@ dimension: t {
     drill_fields: [min_rh, rh]
     value_format: "0\" Horas\""
   }
+  measure: Horas5 {
+    type: number
+    sql: ${count} * 1/12 ;;
+    drill_fields: [min_rh, rh]
+    value_format: "0\" Horas\""
+  }
   measure: 15min {
     type: number
     sql: ${count} /3 ;;
