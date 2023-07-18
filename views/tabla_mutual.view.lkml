@@ -214,23 +214,23 @@ dimension: t {
   dimension: estadoCO2{
     case: {
       when: {
-        sql: ${co2} < 25;;
+        sql: ${co2} < 700;;
         label: "Bueno"
       }
       when: {
-        sql: ${co2} >= 25 AND ${co2}< 50;;
+        sql: ${co2} >= 700 AND ${co2}< 1000;;
         label: "Regular"
       }
       when: {
-        sql: ${co2} >= 50 AND ${co2} < 75;;
+        sql: ${co2} >= 1000 AND ${co2} < 2000;;
         label: "Alerta"
       }
       when: {
-        sql: ${co2}>= 75 AND ${co2} < 100;;
+        sql: ${co2} >= 2000 AND ${co2} < 3000;;
         label: "Pre-Emergencia"
       }
       when: {
-        sql: ${co2} >= 100;;
+        sql: ${co2} >= 3000;;
         label: "Emergencia"
       }
     }
@@ -239,24 +239,16 @@ dimension: t {
   dimension: estadoTVOC{
     case: {
       when: {
-        sql: ${tvoc} < 25;;
+        sql: ${tvoc} < 0-400;;
         label: "Bueno"
       }
       when: {
-        sql: ${tvoc} >= 25 AND ${tvoc}< 50;;
+        sql: ${tvoc} >= 400 AND ${tvoc}< 800;;
         label: "Regular"
       }
       when: {
-        sql: ${tvoc} >= 50 AND ${tvoc} < 75;;
-        label: "Alerta"
-      }
-      when: {
-        sql: ${tvoc}>= 75 AND ${tvoc} < 100;;
-        label: "Pre-Emergencia"
-      }
-      when: {
-        sql: ${tvoc} >= 100;;
-        label: "Emergencia"
+        sql: ${tvoc} >= 800;;
+        label: "Malo"
       }
     }
   }
