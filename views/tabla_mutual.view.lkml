@@ -68,7 +68,7 @@ dimension: t {
   }
   measure: count5 {
     type: number
-    sql: ${count} * 5
+    sql: ${count} * 5 ;;
     drill_fields: []
   }
   measure: Horas {
