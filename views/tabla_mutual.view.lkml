@@ -250,11 +250,11 @@ dimension: t {
   dimension: estadoTVOC{
     case: {
       when: {
-        sql: ${tvoc} < 0-400;;
+        sql: ${tvoc} < 400;;
         label: "Bueno"
       }
       when: {
-        sql: ${tvoc} >= 400 AND ${tvoc}< 800;;
+        sql: ${tvoc} >= 400 AND ${tvoc} < 800;;
         label: "Regular"
       }
       when: {
