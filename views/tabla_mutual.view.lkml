@@ -286,13 +286,13 @@ dimension: t {
   measure: avg_co2 {
     type: average
     sql: ${co2} ;;
-    value_format: "0.0\" μg/m3\""
+    value_format: "0.0\" ppm\""
   }
 
   measure: avg_tvoc {
     type: average
     sql: ${tvoc} ;;
-    value_format: "0.0\" μg/m3\""
+    value_format: "0.0\" ppm\""
   }
 
   measure: max_t {
@@ -364,22 +364,22 @@ dimension: t {
   measure: max_co2 {
     type: max
     sql: ${co2} ;;
-    value_format: "0.0\" μg/m3\""
+    value_format: "0.0\" ppm\""
   }
   measure: min_co2 {
     type: min
     sql: ${co2} ;;
-    value_format: "0.0\" μg/m3\""
+    value_format: "0.0\" ppm\""
   }
   measure: max_tvoc {
     type: max
     sql: ${tvoc} ;;
-    value_format: "0.0\" μg/m3\""
+    value_format: "0.0\" ppm\""
   }
   measure: min_tvoc {
     type: min
     sql: ${tvoc} ;;
-    value_format: "0.0\" μg/m3\""
+    value_format: "0.0\" ppm\""
   }
 
   dimension: camiones {
