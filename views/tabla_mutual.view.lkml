@@ -66,6 +66,11 @@ dimension: t {
     type: count
     drill_fields: []
   }
+  measure: count5 {
+    type: number
+    sql: ${count} * 5
+    drill_fields: []
+  }
   measure: Horas {
     type: number
     sql: ${count} * 1/60 ;;
