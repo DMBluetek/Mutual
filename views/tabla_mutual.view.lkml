@@ -51,7 +51,8 @@ dimension: t {
       week,
       month,
       quarter,
-      year
+      year,
+      hour
     ]
     sql: ${TABLE}.Time ;;
   }
