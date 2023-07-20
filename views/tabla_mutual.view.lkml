@@ -432,7 +432,18 @@ dimension: t {
         sql: ${TABLE}.id = 'BS-001G-00003';;
         label: "Oficina"
       }
-
+      when: {
+        sql: ${TABLE}.id = 'BS-100L-00015';;
+        label: "Bulldozer 889"
+      }
+      when: {
+        sql: ${TABLE}.id = 'BS-100L-00016';;
+        label: "Excavadora 791"
+      }
+      when: {
+        sql: ${TABLE}.id = 'BS-100L-00019';;
+        label: "Camión Articulado 740"
+      }
     }
   }
 
