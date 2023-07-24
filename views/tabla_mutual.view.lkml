@@ -401,7 +401,7 @@ dimension: t {
     value_format: "0.0\" ppm\""
   }
 
-  dimension: camiones {
+  dimension: maquinas {
     case: {
       when: {
         sql: ${TABLE}.id = 'BS-100L-00013';;
