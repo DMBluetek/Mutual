@@ -405,11 +405,11 @@ dimension: t {
     case: {
       when: {
         sql: ${TABLE}.id = 'BS-100L-00013';;
-        label: "Bulldozer 484"
+        label: "*Bulldozer 484*"
       }
       when: {
         sql: ${TABLE}.id = 'BS-100L-00014';;
-        label: "Motoniveladora 890"
+        label: "*Motoniveladora 890*"
       }
       when: {
         sql: ${TABLE}.id = 'BS-100L-00017';;
@@ -417,11 +417,11 @@ dimension: t {
       }
       when: {
         sql: ${TABLE}.id = 'BS-100L-00018';;
-        label: "Retroexcavadora 171"
+        label: "*Retroexcavadora 171*"
       }
       when: {
         sql: ${TABLE}.id = 'BS-100L-00020';;
-        label: "Camión Articulado 741"
+        label: "*Camión Articulado 741*"
       }
       when: {
         sql: ${TABLE}.id = 'BS-100L-00021';;
@@ -433,11 +433,11 @@ dimension: t {
       }
       when: {
         sql: ${TABLE}.id = 'BS-001G-00003';;
-        label: "Oficina"
+        label: "Oficina exterior"
       }
       when: {
         sql: ${TABLE}.id = 'BS-100L-00015';;
-        label: "Bulldozer 889"
+        label: "*Bulldozer 889*"
       }
       when: {
         sql: ${TABLE}.id = 'BS-100L-00016';;
