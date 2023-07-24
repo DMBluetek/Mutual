@@ -52,10 +52,12 @@ dimension: t {
       month,
       quarter,
       year,
-      hour
+      hour,
+      minute5
     ]
     sql: ${TABLE}.Time ;;
   }
+
 
   dimension: tvoc {
     type: number
