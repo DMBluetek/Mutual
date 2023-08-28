@@ -196,6 +196,32 @@ dimension: t {
     }
   }
 
+  dimension: estadoICAN{
+    case: {
+      when: {
+        sql: ${ica1} < 45;;
+        label: "Aceptable"
+      }
+      when: {
+        sql: ${ica1} >= 45;;
+        label: "Inaceptable"
+      }
+    }
+  }
+
+  dimension: estadoICAD{
+    case: {
+      when: {
+        sql: ${ica1} < 60;;
+        label: "Aceptable"
+      }
+      when: {
+        sql: ${ica1} >= 60;;
+        label: "Inaceptable"
+      }
+    }
+  }
+
   dimension: estadopm10{
     case: {
       when: {
