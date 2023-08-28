@@ -405,12 +405,12 @@ dimension: t {
   measure: max_iqa25 {
     type: max
     sql: ${ica25} ;;
-    value_format: "0.0\" μg/m3\""
+    value_format: "0.0\" dBA\""
   }
   measure: min_iqa10 {
     type: min
     sql: ${ica10} ;;
-    value_format: "0.0\" μg/m3\""
+    value_format: "0.0\" dBA\""
   }
   measure: max_co2 {
     type: max
