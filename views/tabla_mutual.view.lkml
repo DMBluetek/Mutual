@@ -199,7 +199,7 @@ dimension: t {
   dimension: estadoICAN{
     case: {
       when: {
-        sql: ${ica1} < 45 AND ${ica1} >= 0;;
+        sql: ${ica1} < 45;;
         label: "Aceptable"
       }
       when: {
@@ -430,7 +430,7 @@ dimension: t {
   }
   measure: max_iqa25 {
     type: max
-    sql: ${ica2_5} ;;
+    sql: ${ica1} ;;
     value_format: "0.0\" dBA\""
   }
   measure: min_iqa10 {
