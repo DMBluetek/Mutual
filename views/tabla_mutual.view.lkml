@@ -199,7 +199,7 @@ dimension: t {
   dimension: estadoICAN{
     case: {
       when: {
-        sql: ${ica1} < 45;;
+        sql: ${ica1} < 45 AND ${ica1} >= 0;;
         label: "Aceptable"
       }
       when: {
