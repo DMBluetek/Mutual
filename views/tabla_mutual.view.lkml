@@ -42,6 +42,12 @@ dimension: t {
   value_format: "0.0\" °C\""
 }
 
+  dimension: ica1 {
+    type: number
+    sql: ${TABLE}.ICA1 ;;
+    value_format: "0.0\" °C\""
+  }
+
   dimension_group: time {
     type: time
     timeframes: [
@@ -300,6 +306,12 @@ dimension: t {
     type: average
     sql: ${pm1} ;;
     value_format: "0.0\" μg/m3\""
+  }
+
+  measure: avg_iqa1 {
+    type: average
+    sql: ${ica1} ;;
+    value_format: "0.0\" dBA\""
   }
 
   measure: avg_co2 {
