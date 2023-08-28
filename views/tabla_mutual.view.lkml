@@ -84,7 +84,7 @@ dimension: t {
   measure: count {
     type: count
     drill_fields: []
-    value_format: "0\" [minutos]\""
+    value_format: "0\" minutos\""
   }
   measure: count5 {
     type: number
