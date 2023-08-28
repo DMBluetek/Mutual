@@ -435,7 +435,7 @@ dimension: t {
   }
   measure: min_iqa10 {
     type: min
-    sql: ${ica10} ;;
+    sql: ${ica1} ;;
     value_format: "0.0\" dBA\""
   }
   measure: max_co2 {
