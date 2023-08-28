@@ -47,6 +47,16 @@ dimension: t {
     sql: ${TABLE}.ICA1 ;;
     value_format: "0.0\" °C\""
   }
+  dimension: ica25 {
+    type: number
+    sql: ${TABLE}.ICA2_5 ;;
+    value_format: "0.0\" °C\""
+  }
+  dimension: ica10 {
+    type: number
+    sql: ${TABLE}.ICA10 ;;
+    value_format: "0.0\" °C\""
+  }
 
   dimension_group: time {
     type: time
@@ -390,6 +400,16 @@ dimension: t {
   measure: min_pm1 {
     type: min
     sql: ${pm1} ;;
+    value_format: "0.0\" μg/m3\""
+  }
+  measure: max_iqa25 {
+    type: max
+    sql: ${ica25} ;;
+    value_format: "0.0\" μg/m3\""
+  }
+  measure: min_iqa10 {
+    type: min
+    sql: ${ica10} ;;
     value_format: "0.0\" μg/m3\""
   }
   measure: max_co2 {
