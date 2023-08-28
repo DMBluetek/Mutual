@@ -47,7 +47,7 @@ dimension: t {
     sql: ${TABLE}.ICA1 ;;
     value_format: "0.0\" °C\""
   }
-  dimension: ica25 {
+  dimension: ica2_5 {
     type: number
     sql: ${TABLE}.ICA2_5 ;;
     value_format: "0.0\" °C\""
@@ -404,7 +404,7 @@ dimension: t {
   }
   measure: max_iqa25 {
     type: max
-    sql: ${ica25} ;;
+    sql: ${ica2_5} ;;
     value_format: "0.0\" dBA\""
   }
   measure: min_iqa10 {
